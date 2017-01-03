@@ -3,18 +3,14 @@ from garbage import Garbage
 
 class PlasticGarbage(Garbage):
 
+    is_clean = False
+
     def __init__(self, name, is_clean):
         super().__init__(name)
-        self._is_clean = is_clean
-
-    def get_name(self):
-        return self._name
-
-    def set_name(self, name):
-        self._name = name
+        self.is_clean = is_clean
 
     def get_is_clean(self):
-        return self._is_clean
+        return self.is_clean
 
     def clean(self):
-        self._is_clean = True
+        self.is_clean = True
